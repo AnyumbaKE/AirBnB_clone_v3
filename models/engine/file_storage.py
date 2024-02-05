@@ -47,7 +47,7 @@ class FileStorage:
             json_objects[key] = self.__objects[key].to_dict()
         with open(self.__file_path, 'w') as f:
             json.dump(json_objects, f)
-    
+
     def reload(self):
         """deserializes the JSON file to __objects"""
         try:
@@ -66,7 +66,7 @@ class FileStorage:
             key = obj.__class__.__name__ + '.' + obj.id
             if key in self.__objects:
                 del self.__objects[key]
-    
+
     def get(self, cls, id):
         """retrieves an object of a class with id"""
         key = "{}.{}".format(cls, id)
