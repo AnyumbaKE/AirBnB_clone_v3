@@ -64,22 +64,23 @@ class FileStorage:
             key = obj.__class__.__name__ + '.' + obj.id
             if key in self.__objects:
                 del self.__objects[key]
-
+    
     def get(self, cls, id):
         """retrieves an object of a class with id"""
-        objects = self.__session.query(classes[cls])
-        for obj in objects:
-            if obj.id == id:
-                return obj
+        key = "{}.{}".format(cls, id)
+        if key in self.__objects.keys():
+            return self.__objects[key]
         return None
 
     def count(self, cls=None):
-        """retrieves the number of objects of a class or all (if cls==None"""
-        nobjects = 0
-        for clss in classes:
-            if cls is None or cls is classes[clss] or cls is clss:
-                nobjects += len(self.__session.query(classes[clss]).all())
-        return nobjects
+        """retrieves the number of objects of a class or all (if cls==None)"""
+        if cls:
+            counter = 0
+            for obj in self.__objects.values():
+                if obj.__class__.__name__ == cls:
+                    counter += 1
+            return counter
+        return len(self.__objects)
 
     def close(self):
         """call reload() method for deserializing the JSON file to objects"""
