@@ -16,7 +16,6 @@ def cities(state_id):
         abort(404)
     return jsonify([city.to_dict() for city in state.cities])
 
-
 @app_views.route('/cities/<city_id>', methods=['GET'], strict_slashes=False)
 def r_city_id(city_id):
     """ Retrieves a City object """
