@@ -12,7 +12,6 @@ import pep8
 import unittest
 Amenity = amenity.Amenity
 
-
 class TestAmenityDocs(unittest.TestCase):
     """Tests to check the documentation and style of Amenity class"""
     @classmethod
