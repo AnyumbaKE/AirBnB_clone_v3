@@ -18,7 +18,6 @@ if models.storage_t == 'db':
                                             ondelete='CASCADE'),
                                  primary_key=True))
 
-
 class Place(BaseModel, Base):
     """Representation of Place """
     if models.storage_t == 'db':
