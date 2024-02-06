@@ -12,7 +12,6 @@ import pep8
 import unittest
 Place = place.Place
 
-
 class TestPlaceDocs(unittest.TestCase):
     """Tests to check the documentation and style of Place class"""
     @classmethod
