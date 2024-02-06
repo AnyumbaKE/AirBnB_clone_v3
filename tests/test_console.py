@@ -9,7 +9,6 @@ import pep8
 import unittest
 HBNBCommand = console.HBNBCommand
 
-
 class TestConsoleDocs(unittest.TestCase):
     """Class for testing documentation of the console"""
     def test_pep8_conformance_console(self):
