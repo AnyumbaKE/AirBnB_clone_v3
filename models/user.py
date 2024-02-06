@@ -7,7 +7,6 @@ import sqlalchemy
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
-
 class User(BaseModel, Base):
     """Representation of a user """
     if models.storage_t == 'db':
