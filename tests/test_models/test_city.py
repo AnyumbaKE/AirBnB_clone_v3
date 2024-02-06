@@ -12,7 +12,6 @@ import pep8
 import unittest
 City = city.City
 
-
 class TestCityDocs(unittest.TestCase):
     """Tests to check the documentation and style of City class"""
     @classmethod
