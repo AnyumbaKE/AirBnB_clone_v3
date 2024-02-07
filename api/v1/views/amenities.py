@@ -48,6 +48,7 @@ def post_amenity():
     storage.save()
     return make_response(jsonify(amenity.to_dict()), 201)
 
+
 @app_views.route('/amenities/<amenity_id>', methods=['PUT'],
                  strict_slashes=False)
 def put_amenity(amenity_id):

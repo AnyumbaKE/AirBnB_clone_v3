@@ -12,6 +12,7 @@ import pep8
 import unittest
 State = state.State
 
+
 class TestStateDocs(unittest.TestCase):
     """Tests to check the documentation and style of State class"""
     @classmethod

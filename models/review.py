@@ -6,6 +6,7 @@ from os import getenv
 import sqlalchemy
 from sqlalchemy import Column, String, ForeignKey
 
+
 class Review(BaseModel, Base):
     """Representation of Review """
     if models.storage_t == 'db':

@@ -61,6 +61,7 @@ def delete_place_amenity(place_id, amenity_id):
     storage.save()
     return make_response(jsonify({}), 200)
 
+
 @app_views.route('/places/<place_id>/amenities/<amenity_id>', methods=['POST'],
                  strict_slashes=False)
 @swag_from('documentation/place_amenity/post_place_amenities.yml',

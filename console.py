@@ -16,6 +16,7 @@ import shlex  # for splitting the line along spaces except in double quotes
 classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
 
+
 class HBNBCommand(cmd.Cmd):
     """ HBNH console """
     prompt = '(hbnb) '
